@@ -93,6 +93,51 @@ impl Material {
         Material::Grass,
         Material::CaveGrass,
     ];
+
+    pub fn value(self) -> usize {
+        match self {
+            Material::Void => 00,
+            Material::Dirt => 01,
+            Material::Sand => 02,
+            Material::Silt => 03,
+            Material::Clay => 04,
+            Material::Mud => 05,
+            Material::SandyLoam => 06,
+            Material::SiltyLoam => 07,
+            Material::ClayLoam => 08,
+            Material::RedSand => 9,
+            Material::Limestone => 10,
+            Material::Shale => 11,
+            Material::Dolomite => 12,
+            Material::Sandstone => 13,
+            Material::RedSandstone => 14,
+            Material::Marble => 15,
+            Material::Slate => 16,
+            Material::Granite => 17,
+            Material::Diorite => 18,
+            Material::Andesite => 19,
+            Material::Gabbro => 20,
+            Material::Basalt => 21,
+            Material::Olivine => 22,
+            Material::Water => 23,
+            Material::Lava => 24,
+            Material::Wood => 25,
+            Material::Leaves => 26,
+            Material::WoodPlanks => 27,
+            Material::GreyBrick => 28,
+            Material::WhiteBrick => 29,
+            Material::Ice => 30,
+            Material::IceSlush => 31,
+            Material::Gravel => 32,
+            Material::Snow => 33,
+            Material::CoarseGrass => 34,
+            Material::TanGrass => 35,
+            Material::LushGrass => 36,
+            Material::MudGrass => 37,
+            Material::Grass => 38,
+            Material::CaveGrass => 39,
+        }
+    }
 }
 
 #[derive(Debug, Clone, Copy)]

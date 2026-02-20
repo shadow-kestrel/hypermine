@@ -166,6 +166,14 @@ impl Sim {
         self.selected_material = *MATERIAL_PALETTE.get(idx).unwrap_or(&MATERIAL_PALETTE[0]);
     }
 
+    pub fn next_material(&mut self) {
+        self.selected_material = Material::VALUES[(self.selected_material.value() + 1) % Material::COUNT];
+    }
+
+    pub fn prev_material(&mut self) {
+        self.selected_material = Material::VALUES[(self.selected_material.value() - 1 + Material::COUNT) % Material::COUNT];
+    }
+
     pub fn selected_material(&self) -> Material {
         self.selected_material
     }
